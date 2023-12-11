@@ -1,0 +1,67 @@
+[
+  {
+    "marque": "Toyota",
+    "pays": "Japon",
+    "fondateur": "Kiichiro Toyoda",
+    "annee_fondation": 1937
+  },
+  {
+    "marque": "Ford",
+    "pays": "États-Unis",
+    "fondateur": "Henry Ford",
+    "annee_fondation": 1903
+  },
+  {
+    "marque": "BMW",
+    "pays": "Allemagne",
+    "fondateur": "Karl Rapp",
+    "annee_fondation": 1916
+  },
+  {
+    "marque": "Honda",
+    "pays": "Japon",
+    "fondateur": "Soichiro Honda",
+    "annee_fondation": 1948
+  },
+  {
+    "marque": "Mercedes-Benz",
+    "pays": "Allemagne",
+    "fondateur": "Karl Benz, Gottlieb Daimler",
+    "annee_fondation": 1926
+  },
+  {
+    "marque": "Chevrolet",
+    "pays": "États-Unis",
+    "fondateur": "Louis Chevrolet, William C. Durant",
+    "annee_fondation": 1911
+  },
+  {
+    "marque": "Volkswagen",
+    "pays": "Allemagne",
+    "fondateur": "German Labour Front",
+    "annee_fondation": 1937
+  },
+  {
+    "marque": "Audi",
+    "pays": "Allemagne",
+    "fondateur": "August Horch",
+    "annee_fondation": 1910
+  },
+  {
+    "marque": "Ferrari",
+    "pays": "Italie",
+    "fondateur": "Enzo Ferrari",
+    "annee_fondation": 1939
+  },
+  {
+    "marque": "Lamborghini",
+    "pays": "Italie",
+    "fondateur": "Ferruccio Lamborghini",
+    "annee_fondation": 1963
+  },
+  {
+    "_id": "454545454",
+    "email": "test@gmail.com",
+    "address": "tunis"
+  }
+]

@@ -1,0 +1,28 @@
+
+.addUserContainer {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.addUserContainer label {
+  margin-bottom: 10px;
+}
+
+.addUserContainer input {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.addUserContainer button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.addUserContainer button:hover {
+  background-color: #0056b3;
+}

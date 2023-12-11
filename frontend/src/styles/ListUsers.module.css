@@ -1,0 +1,21 @@
+
+.listUsersContainer {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.listUsersContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.listUsersContainer ul {
+  list-style: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.listUsersContainer li {
+  margin-bottom: 5px;
+}
