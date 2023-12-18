@@ -1,21 +1,26 @@
-
 .listUsersContainer {
-  width: 80%;
+  max-width: 800px;
   margin: 20px auto;
 }
 
-.listUsersContainer h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.listUsersContainer ul {
-  list-style: none;
+.userCard {
   border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
-.listUsersContainer li {
+.userDetails {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.userDetails li {
   margin-bottom: 5px;
+}
+.spanText {
+  font-weight: bolder;
 }

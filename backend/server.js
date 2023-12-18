@@ -1,15 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const userRoutes = require("./routes/userRoutes");
+const studentRoutes = require("./routes/studentRoutes");
 const moviesRoutes = require("./routes/moviesRoutes");
+const authRoutes = require("./routes/authRoutes");
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/users/", userRoutes);
+app.use("/api/users/", studentRoutes);
 app.use("/api/movies/", moviesRoutes);
-
+app.use("/api/auth", authRoutes);
 //connection a la base de donnees  !
 
 // get post put delete
