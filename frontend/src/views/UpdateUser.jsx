@@ -48,7 +48,7 @@ function UpdateUser() {
                 cin <input type="number" value={user?.cin} className={styles.inputStyle} onChange={e => setUser({ ...user, cin: e.target.value })} />
             </label>
             <br />
-            <button className={styles.btnStyle} onClick={handleUpdateUser}>mettre a jour </button>
+            <button className={styles.updateButton} onClick={handleUpdateUser}>mettre a jour </button>
         </div>
     );
 }

@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-
+<Navbar/>
       <Routes><Route path='/add' element={<AddUser />} />
         <Route path='/' element={<ListUsers />} />
         <Route path='/update/:id' element={<UpdateUser />} />

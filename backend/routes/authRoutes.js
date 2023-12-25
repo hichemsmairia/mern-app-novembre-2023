@@ -2,7 +2,7 @@ const express = require("express");
 const userModel = require("../models/userModel");
 const bcrypt = require("bcrypt");
 const router = express.Router();
-
+const jwt = require('jsonwebtoken')
 router.post("/register", async (req, res) => {
   try {
     let user = await userModel.findOne({ email: req.body.email });
@@ -30,8 +30,30 @@ router.post("/register", async (req, res) => {
   }
 });
 
-router.post('/login',async(req,res)=>{
-    
+router.post('/login', async (req, res) => {
+  let user = await userModel.findOne({ email: req.body.email });
+  //cas 1 email n'existe    pas 
+  if (!user) {
+    res.json({ error: "cette addresse email n'existe pas ! " });
+  } else {
+    bcrypt.compare(req.body.password, user.password, (err, isKifkif) => {
+      if (isKifkif) {
+        const payload = {
+          "_id": user._id,
+          "email": user.email,
+        }
+
+        let token = jwt.sign(payload, "secret", { expiresIn: 3600 })
+
+        res.json({ message: "connecté avec succes ! ", token: token })
+      } else {
+        // cas 2 mot de passe incorrecte 
+        res.json({ error: "veuillez verifier votre mot de passe " })
+      }
+    })
+  }
+
+
 })
 
 

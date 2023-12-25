@@ -31,8 +31,8 @@ function ListUsers() {
                         <li><span className={styles.spanText}>CIN: </span> {user.cin}</li>
                         <li> <span className={styles.spanText}>Téléphone:</span>  {user.tel}</li>
                     </ul>
-                    <button onClick={() => navigate(`update/${user._id}`)} >update</button>
-                    <button onClick={() => handleDelete(user._id)} >supprimer</button>
+                    <button className={styles.updateButton} onClick={() => navigate(`update/${user._id}`)} >update</button>
+                    <button className={styles.deleteButton}  onClick={() => handleDelete(user._id)} >supprimer</button>
                 </div>
             )) : <h1>Le tableau est vide</h1>}
         </div>
