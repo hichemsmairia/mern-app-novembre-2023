@@ -14,25 +14,10 @@ const Login = () => {
         axios.post('http://localhost:5000/api/auth/login', user).then((result) => {
             console.log(result.data)
             localStorage.setItem('token', result.data.token)
-            // setCookie("user", user, { path: "/" });
         })
 
     };
-/*
 
-import { CookiesProvider, useCookies } from "react-cookie";
-
-function App() {
-  const [cookies, setCookie] = useCookies(["user"]);
-
-  function handleLogin(user) {
-    setCookie("user", user, { path: "/" });
-  }
-
-
-
-
-*/
 
 
 
