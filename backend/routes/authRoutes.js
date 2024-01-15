@@ -12,7 +12,8 @@ router.post("/register", async (req, res) => {
       let newUser = new userModel(req.body);
       //------------------
       bcrypt.genSalt(10, (err, salt) => {
-        if (err) {cd 
+        if (err) {
+          cd
           console.log(err);
         }
         bcrypt.hash(req.body.password, salt, (err, hashedPassword) => {
@@ -45,7 +46,7 @@ router.post('/login', async (req, res) => {
 
         let token = jwt.sign(payload, "secret", { expiresIn: 3600 })
 
-        res.json({ message: "connecté avec succes ! ", token: token })
+        res.json({ msg: "connecté avec succes ! ", token: token, user: user })
       } else {
         // cas 2 mot de passe incorrecte 
         res.json({ error: "veuillez verifier votre mot de passe " })

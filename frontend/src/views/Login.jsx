@@ -1,26 +1,18 @@
 import React, { useState } from 'react';
 import styles from '../styles/Login.module.css';
-import axios from 'axios'
+import { useDispatch } from 'react-redux';
+import { signin } from '../../redux/slices/authSlice';
 const Login = () => {
+    const dispatch = useDispatch()
     const [user, setUser] = useState({
         email: '',
         password: '',
     });
 
-
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/api/auth/login', user).then((result) => {
-            console.log(result.data)
-            localStorage.setItem('token', result.data.token)
-        })
-
+        dispatch(signin(user))
     };
-
-
-
-
 
     return (
         <div className={styles['login-container']}>

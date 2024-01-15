@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useTransition } from 'react';
 import styles from '../styles/Login.module.css';
-import axios from 'axios'
 import { toast, ToastContainer } from 'react-toastify'
+import { useDispatch } from 'react-redux'
+import { signup } from '../../redux/slices/authSlice';
+
 const Register = () => {
+    const dispatch = useDispatch()
     const [user, setUser] = useState({
         name: '',
         email: '',
@@ -10,15 +13,9 @@ const Register = () => {
     });
 
     const handleSubmit = (e) => {
+        console.log(user)
         e.preventDefault();
-        axios.post('http://localhost:5000/api/auth/register', user).then(result => {
-            console.log(result.data)
-            if (result.data.msg) {
-                toast.success(result.data.msg)
-            } if (result.data.error) {
-                toast.error(result.data.error)
-            }
-        })
+        dispatch(signup(user))
 
     };
 
@@ -45,7 +42,7 @@ const Register = () => {
                         <input
                             type="email"
                             onChange={e => setUser({ ...user, email: e.target.value })}
-                            required
+
                         />
                     </div>
                     <div className={styles['form-group']}>
